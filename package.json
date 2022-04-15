@@ -1,0 +1,25 @@
+{
+  "name": "discord-music-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/USTH-Coders-Club/discord-music-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/USTH-Coders-Club/discord-music-bot/issues"
+  },
+  "homepage": "https://github.com/USTH-Coders-Club/discord-music-bot#readme",
+  "dependencies": {
+    "discord-player": "^5.2.2",
+    "discord.js": "^13.6.0",
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
