@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/USTH-Coders-Club/discord-music-bot#readme",
   "dependencies": {
+    "@discordjs/opus": "^0.5.3",
     "discord-player": "^5.2.2",
     "discord.js": "^13.6.0",
     "dotenv": "^16.0.0",
