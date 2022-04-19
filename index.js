@@ -15,4 +15,6 @@ client.on('messageCreate', (message) => {
     Handler.handle(client, message, player);
 })
 
+player.on("trackStart", (queue, track) => queue.metadata.channel.channel.send(`🎶 | Now playing **${track.title}**!`));
+
 client.login(process.env.CLIENT_TOKEN);

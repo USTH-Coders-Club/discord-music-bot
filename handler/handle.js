@@ -7,24 +7,15 @@ module.exports = {
         }
         const command =  raw_message.split(" ")[0].substring(process.env.PREFIX.length);
         const args = raw_message.split(" ").slice(1).join(" ");
-        
-        const queue = player.createQueue(message.guildId, {
-            metadata: {
-                channel: "964542085195767878"
-            }
-        });
-        try {
-            if (!queue.connection) await queue.connect('916687023253893140');
-        } catch {
-            queue.destroy();
-            return await message.channel.send({ content: "Could not join your voice channel!", ephemeral: true });
+        if (command == "play") {
+            const Play = require('../commands/play');
+            Play.execute(message, client, player, args);
+            return;
         }
-
-        const track = await player.search(args, {
-            requestedBy: message.author.username
-        }).then(x => x.tracks[0]);
-
-        queue.play(track);
+        if (command == "skip") {
+            const Skip = require('../commands/skip');
+            Skip.execute(message, client, player);
+        }
 
         //console.log(message);
 
